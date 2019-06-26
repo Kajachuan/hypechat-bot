@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/Kajachuan/hypechat-bot#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "requestify": "^0.2.5"
   },
   "engines": {
     "node": "11.15.0"
