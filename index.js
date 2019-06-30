@@ -24,7 +24,7 @@ app.get('/help', function (req, res) {
 });
 
 app.get('/info', function (req, res) {
-  request.get(server_url + 'organization/' + req.query.org).then(function (response) {
+  request.get(server_url + 'organization/' + req.query.org + '/' + req.query.channel).then(function (response) {
     let body = response.getBody();
     res.json({message: 'Nombre del canal: ' + req.query.channel + '\n' +
                        'Creador: ' + body.owner + '\n' +
