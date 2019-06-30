@@ -46,11 +46,11 @@ app.get('/me', function (req, res) {
 
 app.get('/mute%20:seconds(\\d+)', function (req, res) {
   cache.put(req.query.user, req.params.seconds, Number(req.params.seconds) * 1000);
-  res.json({message: 'Ahora estoy muteado por ' + req.params.seconds + ' segundos.'});
+  res.json({message: 'Fui muteado por ' + req.params.seconds + ' segundos.'});
 });
 
 app.use(function(req, res, next) {
-  res.status(404).json({message: 'No entiendo el mensaje.'});
+  res.status(404).json({message: 'No entiendo el mensaje. Escribí "@tito help" para ver los comandos disponibles.'});
 });
 
 app.listen(process.env.PORT || 3000);
